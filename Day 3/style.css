@@ -1,0 +1,10 @@
+body{
+    font-family: Arial,Helvetica,san-serif;
+}
+
+.button{
+    font-size:20px;
+}
+.button:hover{
+    background-color:lightblue;
+}
