@@ -1,0 +1,38 @@
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #FFD700;
+    border-width: 4px;
+    padding: 10px;
+    margin: 60px;
+    background: linear-gradient(to top right, white, white, white, white, #FFD700)
+}
+
+.name{
+    text-align: center;
+    margin: 2px;
+    font-family: Courier, monospace;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.title{
+    text-align: center;
+    font-family: Courier, monospace;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.link{
+    text-align: center;
+    margin-top: 60px;
+    font-family: Courier, monospace;
+    font-size: small;
+}
+
+.link:hover{
+    font-weight: bold;
+    font-size: medium;
+}
