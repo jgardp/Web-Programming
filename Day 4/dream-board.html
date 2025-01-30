@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Isidro">
+    <title>Isidro's Dream Board</title>
+    <style>
+        body {
+            background: linear-gradient(#5a8bde,white, white);
+            font-family: 'Courier New', Courier, monospace
+        }
+
+        img{
+            display: block;
+            margin: 5px auto;
+            max-width: 100%;
+            height: 250px;
+            border: solid white 2px;
+        }
+        
+        p {
+            padding: 5px;
+            border: solid white 2px;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 5px;
+        }
+    
+        .grid-item{
+            border: 3px solid #376fcf;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #5a8bde;
+            padding: 15px;
+            box-shadow: 5px 5px 5px #4e4e4e;
+            color: white;
+        }
+
+        .footer{
+            text-align:center; 
+            color: #5a8bde;
+            margin-top: 10px;
+            padding: 5px;
+        }
+    
+        @media screen and (max-width: 768px){
+            .grid-container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 568px){
+            .grid-container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center; color:white;">✨ Isidro's Dream Board ✨</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="coastaltown.jpeg" alt="coastal town">
+            <p>Live in a city/town near the sea.</p>
+        </div> 
+        <div class="grid-item">
+            <img src="cozyhouse.jpg" alt="cozy inside house">
+            <p>Buy a cozy mid-size house.</p>
+        </div>
+        <div class="grid-item">
+            <img src="dubai.jpg" alt="dubai">
+            <p>Visit one of the most advanced cities in the world, Dubai.</p>
+        </div> 
+        <div class="grid-item">
+            <img src="food.jpg" alt="variety of food">
+            <p>Learn to cook a variety of dishes from different cultures.</p>
+        </div> 
+        <div class="grid-item">
+            <img src="tournament.jpg" alt="large tournament">
+            <p>Win a national tournament in a TCG(Trading Card Game).</p>
+        </div> 
+        <div class="grid-item">
+            <img src="tiramisu.jpg" alt="tiramisu">
+            <p>Taste tiramisu for the first time.</p>
+        </div> 
+    </div>
+    <div class="footer">
+        <h3>"Don't ever let someone tell you, you can't do something. Not even me. You got a dream, you got to protect it." - Chris Gardner,Pursuit of Happyness</h3>
+    </div>
+</body>
+
+</html>
