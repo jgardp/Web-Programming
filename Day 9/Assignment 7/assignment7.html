@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Isidro">
+    <title>Form Assignment</title>
+    <style>
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        form{
+            border: 2px solid rgb(208, 231, 231);
+            background-color:rgb(236, 243, 243);
+            padding: 10px;
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+    <script>
+        function formSubmitted(form){
+
+            document.getElementById("form data").innerHTML = "Name: " + form.elements["name"].value 
+            + " | Email: " + form.elements["email"].value 
+            + " | Password: " + form.elements["password"].value 
+            + " | Age: " + form.elements["age"].value
+            + " | Gender: " + form.elements["gender"].value
+            + " | Country: " + form.elements["country"].value
+            + " | Agreement: " + form.elements["agreement"].value;
+
+            form.reset();
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center">Personal Form</h1>
+    <form>
+        Name: <input type="text" size="25" id="name" placeholder="Enter your name here">
+        <br><br>
+        Email: <input type="email" size="25" id="email" placeholder="Enter your email here">
+        <br><br>
+        Password: <input type="password" size="25" id="password" placeholder="Enter your password here">
+        <br><br>
+        Age: <input type="number" size="25" id="age" placeholder="Enter your age here">
+        <br><br>
+        Gender: 
+        <br>
+        Male <input type="radio" id="gender" name="gender" value="Male">
+        Female <input type="radio" id="gender" name="gender" value="Female">
+        Other <input type="radio" id="gender" name="gender" value="Other">
+        <br><br>
+        Country:
+        <select id="country">
+            <option value="Argentina">Argentina</option>
+            <option value="Australia">Australia</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Germany">Germany</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Japan">Japan</option>
+            <option value="Mexico">Mexico</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Russia">Russia</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option> 
+        </select>
+        <br><br>
+        Agree to Terms and Conditions <input type="checkbox" id="agreement" value="Accepted">
+        <br><br>
+        <input type="button" value="Submit" onclick="formSubmitted(this.form)">
+    </form>
+    <p id="form data">
+
+    </p>
+</body>
+</html>
