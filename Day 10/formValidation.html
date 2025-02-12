@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Isidro">
+    <title>Form Validation</title>
+    <style>
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        form{
+            border: 2px solid rgb(208, 231, 231);
+            background-color:rgb(236, 243, 243);
+            padding: 10px;
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input{
+            border-color: initial;
+        }
+
+        input[type=button]:hover{
+            background-color: rgb(170, 89, 170);
+            color: white;
+        }
+
+    </style>
+    <script>
+        function formSubmitted(form){
+
+            let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email pattern check
+
+            if (form.elements["name"].value == "") { // Invalid name
+                document.getElementById("form accepted").innerHTML = "Name must be filled in.";
+                document.getElementById("name").style.borderColor = "red";
+            }
+            else if (form.elements["age"].value < 18 || form.elements["age"].value > 100){ // Invalid age
+                document.getElementById("form accepted").innerHTML = "Age must be between 18 and 100.";
+                document.getElementById("age").style.borderColor = "red";
+            }
+            else if (pattern.test(form.elements["email"].value) == false) // Invalid email
+            {
+                document.getElementById("form accepted").innerHTML = "Email is invalid.";
+                document.getElementById("email").style.borderColor = "red";
+            }
+            else // Form successful
+            {
+                document.getElementById("form accepted").innerHTML = "Form submitted successfully!";
+                document.getElementById("name").style.borderColor = "initial";
+                document.getElementById("age").style.borderColor = "initial";
+                document.getElementById("email").style.borderColor = "initial";
+                form.reset();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center">Valid Form</h1>
+    <form>
+        Name: <input type="text" size="40" id="name" placeholder="Enter your name here" required>
+        <br><br>
+        Email: <input type="email" size="25" id="email" placeholder="Enter your email here" required>
+        <br><br>
+        Age: <input type="number" size="10" id="age" placeholder="Enter your age here">
+        <br><br>
+        <input type="button" value="Submit" onclick="formSubmitted(this.form)">
+
+        <p id="form accepted">
+
+        </p>
+    </form>
+</body>
+</html>
