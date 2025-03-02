@@ -7,3 +7,7 @@
     color: aliceblue;
     margin: 10px;
 }
+
+.card:hover{
+    margin-bottom: 20px;
+}
