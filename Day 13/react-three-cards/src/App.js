@@ -5,7 +5,9 @@ import CardList from "./CardList.js";
 function App(){
 
   return(
-    CardList()
+    <div>
+      <CardList />
+    </div>
   );
 
 }
