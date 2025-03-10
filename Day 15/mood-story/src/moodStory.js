@@ -7,7 +7,7 @@ export default function MoodStory(){
     const [name, setName] = useState("No Song or Image")
     const [link, setLink] = useState("https://google.com");
     const [story, setStory] = useState("No Story");
-    const [theme, setTheme] = useState("white")
+    const [theme, setTheme] = useState("white");
 
     function happyMood() {
         setMood("😄")
