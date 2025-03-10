@@ -37,6 +37,13 @@ const classes = [
     {id:4, name:"English", professor: "Mrs.Letter"},
 ]
 
+const vehicles = [
+    {id:1, make:"Ford", model: "Explorer"},
+    {id:2, make:"Toyota", model: "Camry"},
+    {id:3, make:"Honda", model: "Civic"},
+    {id:4, make:"Tesla", model: "Cybertruck"},
+]
+
 //Routing... req = request from client   res = response from server
 app.get("/", (req, res) => res.send("Welcome to my API!"));
 
@@ -48,7 +55,7 @@ app.get("/fruits", (req, res) => res.json(fruits));
 
 app.get("/clothes", (req, res) => res.json(clothes));
 
-app.get("/classes", (req, res) => res.json(classes));
+app.get("/vehicles", (req, res) => res.json(vehicles));
 
 //Start server...
 const PORT = 3000;
