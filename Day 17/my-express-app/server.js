@@ -55,6 +55,8 @@ app.get("/fruits", (req, res) => res.json(fruits));
 
 app.get("/clothes", (req, res) => res.json(clothes));
 
+app.get("/classes", (req, res) => res.json(classes));
+
 app.get("/vehicles", (req, res) => res.json(vehicles));
 
 //Start server...
