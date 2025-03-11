@@ -44,7 +44,7 @@ const vehicles = [
     {id:4, make:"Tesla", model: "Cybertruck"},
 ]
 
-//Routing... 
+//Routing... req = request from client   res = response from server
 app.get("/", (req, res) => res.send("Welcome to my API!"));
 
 app.get("/users", (req, res) => res.json(users));
