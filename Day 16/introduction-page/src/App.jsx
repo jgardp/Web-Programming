@@ -1,5 +1,5 @@
 import './App.css'
-import profile from './assets/react.svg'
+import profile from './assets/profile.png'
 
 function App() {
  
