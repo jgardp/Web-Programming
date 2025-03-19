@@ -1,6 +1,6 @@
 //import modules
-const express = required('express');
-const loggerMiddle = require('./middlewares/loggerMiddleWare');
+const express = require('express');
+const loggerMiddleware = require('./middlewares/loggerMiddleware');
 const apiRoute = require('./routes/api');
 
 const app = express();
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(loggerMiddleware);
 
 //Mount routes...
-app.use('/api', apiRoutes);
+app.use('/api', apiRoute);
 
 //Error Handling...
 app.use((err, req, res, next)=>{
@@ -19,3 +19,7 @@ app.use((err, req, res, next)=>{
     res.status(500).send({error: 'Internal Server Error'});
 });
 
+//Start server
+app.listen(PORT, ()=> {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
