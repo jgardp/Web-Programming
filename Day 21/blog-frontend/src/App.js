@@ -28,7 +28,7 @@ function App(){
   const deletePost = (id) => {
     axios.delete(`http://localhost:5000/posts/${id}`)
     .then(res => {
-      setPosts([]);
+      setPosts(posts.filter(post => post._id !== id));
     })
     .catch(err => console.error("Error deleting the post:", err));
   };
