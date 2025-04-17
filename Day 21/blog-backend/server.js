@@ -49,6 +49,26 @@ app.post('/posts', async (req, res) => {
     }
 });
 
+app.delete('/posts/:id', async (req, res) =>{
+    try{
+        const deletePost = await Post.findByIdAndDelete(req.params.id);
+        res.status(200).json({message: 'Successfully deleted post!'})
+    }
+    catch(err){
+        res.status(500).json({message: 'Failed to delete posts.'});
+    }
+});
+
+app.put('/posts/:id', async (req, res) =>{
+    try{
+        const updatedPost = await Post.findByIdAndUpdate(req.params.id, req.body);
+        res.status(200).json({message: 'Successfully updated post!'})
+    }
+    catch(err){
+        res.status(500).json({message: 'Failed to update posts.'});
+    }
+});
+
 //Start server!
 
 app.listen(PORT, ()=>{

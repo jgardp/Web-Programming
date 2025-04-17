@@ -1,3 +1,27 @@
+# Setup Instructions
+
+1. Start server
+    cd into blog-backend. Then run nodemon `.\server.js` in a terminal.
+
+2. Start website
+    cd into blog-frontend. Then run `npm start` in a different terminal.
+
+3. Submit posts on website. Posts can also be added/updated on MongoDB or through Postman.
+
+# New Features
+
+DELETE
+Added a delete functionality to front and backend so users can delete submitted post.
+
+EDIT
+Edit partial functionality to update post is not working on front-end but does in the back-end.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
