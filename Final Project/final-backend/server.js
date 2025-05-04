@@ -19,35 +19,34 @@ mongoose.connect('mongodb://localhost:27017/finalDB', {
 
 //Defining schemas and models
 const projectsSchema = new mongoose.Schema({
-    title: String,
     description: String,
-    technologies: String,
     link: String,
-    image: String,
+    technologies: String,   
+    title: String,
 })
 const Projects = mongoose.model('Projects', projectsSchema);
 
 const educationSchema = new mongoose.Schema({
-    institution: String,
     degree: String,
-    year: String,
     description: String,
+    institution: String,
+    year: String,  
 })
 const Education = mongoose.model('Education', educationSchema);
 
-const skillsSchema = new mongoose.Schema({
-    name: String,
+const skillsSchema = new mongoose.Schema({   
     level: String,
+    name: String,
 })
 const Skills = mongoose.model('Skills', skillsSchema);
 
-const contact_messagesSchema = new mongoose.Schema({
+const contactSchema = new mongoose.Schema({
     name: String,
     email: String,
     message: String,
     timestamp: String,
 })
-const Contact = mongoose.model('Contact', contact_messagesSchema);
+const Contact = mongoose.model('Contact', contactSchema);
 
 //Routes
 
@@ -55,6 +54,7 @@ const Contact = mongoose.model('Contact', contact_messagesSchema);
 app.get('/projects', async (req, res) =>{
     try{
         const projects = await Projects.find();
+        res.json(projects);
     }
     catch(err){
         res.status(500).json({message: 'Failed to fetch projects.'});
@@ -65,6 +65,7 @@ app.get('/projects', async (req, res) =>{
 app.get('/education', async (req, res) =>{
     try{
         const education = await Education.find();
+        res.json(education);
     }
     catch(err){
         res.status(500).json({message: 'Failed to fetch education.'});
@@ -75,6 +76,7 @@ app.get('/education', async (req, res) =>{
 app.get('/skills', async (req, res) =>{
     try{
         const skills = await Skills.find();
+        res.json(skills);
     }
     catch(err){
         res.status(500).json({message: 'Failed to fetch skills.'});
@@ -85,6 +87,7 @@ app.get('/skills', async (req, res) =>{
 app.get('/contact', async (req, res) =>{
     try{
         const contact = await Contact.find();
+        res.json(contact);
     }
     catch(err){
         res.status(500).json({message: 'Failed to fetch contact.'});
