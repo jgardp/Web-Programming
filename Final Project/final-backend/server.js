@@ -47,7 +47,7 @@ const contact_messagesSchema = new mongoose.Schema({
     message: String,
     timestamp: String,
 })
-const Contact = mongoose.model('Projects', contact_messagesSchema);
+const Contact = mongoose.model('Contact', contact_messagesSchema);
 
 //Routes
 
