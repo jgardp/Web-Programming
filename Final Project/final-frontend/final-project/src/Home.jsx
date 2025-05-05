@@ -17,7 +17,7 @@ function Home() {
           </div>
       
           <div className="max-w-3xl bg-white m-5 rounded-2xl shadow-md text-center p-5">
-            <p className="text-gray-900">LinkedIn: <a href="#" className="hover:underline">www.linkedin.com/in/jose-garduno-pena-963299252</a></p>
+            <p className="text-gray-900">LinkedIn: <a href="https://www.linkedin.com/in/jose-garduno-pena-963299252" className="hover:underline hover:text-blue-500" target="_blank">www.linkedin.com/in/jose-garduno-pena-963299252</a></p>
           </div>
         </main>
       </div>
