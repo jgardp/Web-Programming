@@ -2,13 +2,16 @@ import React from 'react';
 import './App.css';
 import profile from './assets/profile.png';
 
+import Navbar from "./Navbar";
+
 function Home() {
 
   return (
     <>
-      <div className="justify-center flex min-h-screen bg-neutral-200 flex-col items-center p-5 font-mono">
+      <Navbar/>
+      <div className="justify-center flex min-h-screen bg-neutral-200 flex-col items-center p-4 font-mono">
         <header className="text-center m-5">
-          <h1 className="font-bold text-slate-800 text-4xl">Jose Isidro Garduno Pena</h1>
+          <h1 className="font-bold text-slate-800 text-4xl mb-2">Jose Isidro Garduno Pena</h1>
         </header>
         <img className="w-45 h-45 rounded-full mb-2" src={profile} alt="profile image"></img>
         <main>

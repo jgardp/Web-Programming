@@ -5,6 +5,8 @@ import axios from 'axios';
 import nac from './assets/nac.jpg';
 import atu from './assets/atu.jpg';
 
+import Navbar from "./Navbar";
+
 function Education() {
 
   const [education, setEducation] = useState([]);
@@ -18,6 +20,7 @@ function Education() {
   return (
     
     <>
+    <Navbar/>
     <div className="justify-center flex bg-neutral-200 items-center pt-5 space-x-5">
       <img className="w-20 h-20 rounded-full mb-2" src={nac} alt="logo"></img>
       <img className="w-20 h-20 rounded-full mb-2" src={atu} alt="logo"></img>    

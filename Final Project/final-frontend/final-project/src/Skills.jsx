@@ -8,6 +8,8 @@ import mongodb from './assets/mongodb.png';
 import express from './assets/express.png';
 import web from './assets/web.jpg';
 
+import Navbar from "./Navbar";
+
 function Skills() {
 
   const [skills, setSkills] = useState([]);
@@ -20,6 +22,7 @@ function Skills() {
 
   return ( 
     <>
+      <Navbar/>
       <div className="justify-center flex bg-neutral-200 items-center pt-5 space-x-5">
         <img className="w-20 h-20 rounded-full mb-2" src={react} alt="logo"></img>
         <img className="w-20 h-20 rounded-full mb-2" src={tailwind} alt="logo"></img>

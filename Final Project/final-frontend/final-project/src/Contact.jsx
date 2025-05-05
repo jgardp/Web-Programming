@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './App.css';
 
+import Navbar from "./Navbar";
+
 function Contact() {
 
   const [contact, setContact] = useState([]);
@@ -29,6 +31,7 @@ function Contact() {
 
   return (
     <>
+      <Navbar/>
       <div className="justify-center flex min-h-screen bg-neutral-200 flex-col items-center p-5 font-mono">
         <div className="max-w-3xl bg-white m-5 rounded-2xl shadow-md text-center p-5">
             <h1 className="font-bold">My Contact Information</h1>
@@ -65,7 +68,7 @@ function Contact() {
 
                 <textarea
                 name="message"
-                placeholder="Enter you message"
+                placeholder="Enter your message"
                 value={form.message}
                 onChange={handleChange}
                 className="p-2 mb-2 w-full"
