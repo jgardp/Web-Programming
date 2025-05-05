@@ -32,7 +32,7 @@ function Skills() {
       </div>
       <div className="justify-center flex min-h-screen bg-neutral-200 flex-col items-center p-3 font-mono">
         {skills.map(data => (
-            <div key={data.id} className="max-w-3xl bg-white m-5 rounded-2xl shadow-md text-center p-5">
+            <div key={data.id} className="max-w-3xl bg-white m-5 rounded-2xl shadow-md text-center p-3">
               <p className="font-bold">Skill: {data.name}</p>
               <p>Proficiency: {data.level}</p>
             </div>
