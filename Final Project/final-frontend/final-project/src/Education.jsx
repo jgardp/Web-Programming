@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import axios from 'axios';
 
+import nac from './assets/nac.jpg';
+import atu from './assets/atu.jpg';
+
 function Education() {
 
   const [education, setEducation] = useState([]);
@@ -15,6 +18,10 @@ function Education() {
   return (
     
     <>
+    <div className="justify-center flex bg-neutral-200 items-center pt-5 space-x-5">
+      <img className="w-20 h-20 rounded-full mb-2" src={nac} alt="logo"></img>
+      <img className="w-20 h-20 rounded-full mb-2" src={atu} alt="logo"></img>    
+    </div>
       <div className="justify-center flex min-h-screen bg-neutral-200 flex-col items-center p-5 font-mono">
         {education.map(data => (
             <div key={data.id} className="max-w-3xl bg-white m-5 rounded-2xl shadow-md text-center p-5">
