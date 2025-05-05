@@ -26,13 +26,13 @@ function Projects() {
     <>
         <Navbar/>
         <div className="justify-center flex bg-neutral-200 items-center pt-5 space-x-5">
-            <img className="w-20 h-20 rounded-full mb-2" src={nextjs} alt="logo"></img>
-            <img className="w-20 h-20 rounded-full mb-2" src={expo} alt="logo"></img>
-            <img className="w-20 h-20 rounded-full mb-2" src={react} alt="logo"></img>
-            <img className="w-20 h-20 rounded-full mb-2" src={tailwind} alt="logo"></img>
-            <img className="w-20 h-20 rounded-full mb-2" src={postgre} alt="logo"></img>
-            <img className="w-20 h-20 rounded-full mb-2" src={mongodb} alt="logo"></img>
-            <img className="w-20 h-20 rounded-full mb-2" src={express} alt="logo"></img>
+            <a href="https://nextjs.org/" target="_blank"><img className="w-20 h-20 rounded-full mb-2" src={nextjs} alt="logo"></img></a>
+            <a href="https://expo.dev/go" target="_blank"><img className="w-20 h-20 rounded-full mb-2" src={expo} alt="logo"></img></a>
+            <a href="https://react.dev/" target="_blank"><img className="w-20 h-20 rounded-full mb-2" src={react} alt="logo"></img></a>
+            <a href="https://tailwindcss.com/" target="_blank"><img className="w-20 h-20 rounded-full mb-2" src={tailwind} alt="logo"></img></a>
+            <a href="https://www.postgresql.org/" target="_blank"><img className="w-20 h-20 rounded-full mb-2" src={postgre} alt="logo"></img></a>
+            <a href="https://www.mongodb.com/" target="_blank"><img className="w-20 h-20 rounded-full mb-2" src={mongodb} alt="logo"></img></a>
+            <a href="https://expressjs.com/" target="_blank"><img className="w-20 h-20 rounded-full mb-2" src={express} alt="logo"></img></a>
         </div>
       
         <div className="justify-center flex min-h-screen bg-neutral-200 flex-col items-center p-5 font-mono">
